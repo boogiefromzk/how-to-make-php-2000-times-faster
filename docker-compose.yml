@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  php:
+    container_name: php_2000x_faster
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5080:80
+    volumes:
+      - './app:/var/www/html'
+      - './mylib:/var/www/mylib'
